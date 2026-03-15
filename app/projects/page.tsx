@@ -16,10 +16,10 @@ const Projects = () => {
               <span className="project-title">Where2P</span>
               <span className="project-tag">View case</span>
             </Link>
-            <div className="project-tile">
+            <Link href="/payday" className="project-tile">
               <span className="project-title">PayDay</span>
-              <span className="project-tag">Live build</span>
-            </div>
+              <span className="project-tag">Case study</span>
+            </Link>
             <div className="project-tile">
               <span className="project-title">Mixologist</span>
               <span className="project-tag">Live build</span>
