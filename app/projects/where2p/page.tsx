@@ -91,6 +91,17 @@ const Where2P = () => {
             Where2P
           </h1>
           <div className="mx-auto max-w-4xl space-y-10 text-[color:var(--muted)]">
+            <div className="flex justify-center">
+              <a
+                href="https://where2pweb-8bpjqvlr6-rishbamis-projects.vercel.app/search"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[color:var(--line)] bg-white px-6 py-3 text-sm font-semibold tracking-wide text-[color:var(--ink)] shadow-[0_15px_40px_-30px_rgba(0,0,0,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-30px_rgba(0,0,0,0.7)]"
+              >
+                Visit Live Site
+              </a>
+            </div>
+
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
                 MVP App Screenshots
