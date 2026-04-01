@@ -93,18 +93,41 @@ const Where2P = () => {
           <div className="mx-auto max-w-4xl space-y-10 text-[color:var(--muted)]">
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                Project Summary
+                MVP App Screenshots
+              </h2>
+              <div className="mvp-grid">
+                {mvpScreens.map((screen) => (
+                  <figure className="mvp-card" key={screen.src}>
+                    <button
+                      type="button"
+                      className="image-button"
+                      onClick={() => openImage(screen.src, screen.alt)}
+                    >
+                      <img
+                        src={screen.src}
+                        alt={screen.alt}
+                        className="mvp-image"
+                      />
+                    </button>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
+                Overview
               </h2>
               <p>
                 Where2P helps people find clean, reliable public toilets fast.
-                It combines real photos, hygiene ratings, and accessibility
-                filters so users don’t have to guess when they’re out and about.
+                It uses real photos, hygiene ratings, and accessibility filters
+                to make quick decisions easier when people are out.
               </p>
             </div>
 
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                Lean Canvas Snapshot
+                Snapshot
               </h2>
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
@@ -113,13 +136,10 @@ const Where2P = () => {
                   </h3>
                   <ul className="mt-2 list-disc pl-5">
                     <li>
-                      Hard to find clean, reliable toilets quickly in busy
-                      areas.
+                      Public toilet info is often incomplete or outdated.
                     </li>
-                    <li>
-                      Online info is outdated and doesn’t show cleanliness.
-                    </li>
-                    <li>Accessibility needs aren’t easy to filter by.</li>
+                    <li>Cleanliness is hard to judge before arriving.</li>
+                    <li>Accessibility details are usually unclear.</li>
                   </ul>
                 </div>
                 <div>
@@ -127,48 +147,31 @@ const Where2P = () => {
                     Solution
                   </h3>
                   <ul className="mt-2 list-disc pl-5">
-                    <li>Map of nearby toilets with real user photos.</li>
-                    <li>Ratings that roll into a hygiene score.</li>
+                    <li>Nearby toilets shown on a map.</li>
+                    <li>Real photos and community hygiene ratings.</li>
                     <li>Filters for accessibility and baby-changing.</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-[color:var(--ink)]">
-                    Unique Value
+                    Why It Matters
                   </h3>
                   <ul className="mt-2 list-disc pl-5">
-                    <li>
-                      Community-powered accuracy with photos and honest reviews.
-                    </li>
-                    <li>
-                      Accessibility-first filtering instead of vague labels.
-                    </li>
+                    <li>Builds trust with photos and user reviews.</li>
+                    <li>Puts accessibility on the main path, not as an afterthought.</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-[color:var(--ink)]">
-                    Early Adopters
+                    Main Users
                   </h3>
                   <ul className="mt-2 list-disc pl-5">
-                    <li>Tourists and commuters in city centers.</li>
-                    <li>Parents with young children.</li>
+                    <li>Tourists and commuters.</li>
                     <li>People with accessibility needs.</li>
+                    <li>Parents with young children.</li>
                   </ul>
                 </div>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                Stakeholders & Persona
-              </h2>
-              <p>
-                Stakeholders include city dwellers, accessibility users,
-                parents/caregivers, commuters, and venue owners. The core persona
-                is Tom, a 26-year-old tourist who needs a clean toilet quickly
-                before a concert. He relies on reviews and photos to avoid
-                wasting time.
-              </p>
             </div>
 
             <div className="space-y-4">
@@ -179,31 +182,9 @@ const Where2P = () => {
                 <li>GPS search for nearby toilets.</li>
                 <li>Filters for cleanliness, accessibility, and baby-changing.</li>
                 <li>Listings with photos, ratings, and key facility info.</li>
-                <li>User reviews, ratings, and photo uploads.</li>
-                <li>Navigation to the toilet via external maps.</li>
+                <li>User reviews and photo uploads.</li>
+                <li>Directions via external maps.</li>
               </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                Non-Functional Goals
-              </h2>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Find a nearby toilet in under 2 seconds.</li>
-                <li>Accessible UI (contrast, labels, simple flow).</li>
-                <li>Secure, reliable, and scalable architecture.</li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                What I’m Focusing On
-              </h2>
-              <p>
-                The focus is building trust: clean data, verified photos, and
-                frictionless discovery. The product lives or dies on speed,
-                accuracy, and user confidence.
-              </p>
             </div>
 
             <div className="space-y-4">
@@ -256,28 +237,6 @@ const Where2P = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[color:var(--ink)]">
-                MVP App Screenshots
-              </h2>
-              <div className="mvp-grid">
-                {mvpScreens.map((screen) => (
-                  <figure className="mvp-card" key={screen.src}>
-                    <button
-                      type="button"
-                      className="image-button"
-                      onClick={() => openImage(screen.src, screen.alt)}
-                    >
-                      <img
-                        src={screen.src}
-                        alt={screen.alt}
-                        className="mvp-image"
-                      />
-                    </button>
-                  </figure>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
         {activeImage && (
