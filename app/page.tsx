@@ -19,14 +19,14 @@ const Home = () => {
               <span className="project-title">Where2P</span>
               <span className="project-tag">View case</span>
             </Link>
-            <Link href="/payday" className="project-tile">
-              <span className="project-title">PayDay</span>
+            <Link href="/projects/client-1" className="project-tile">
+              <span className="project-title">Client #1</span>
               <span className="project-tag">Case study</span>
             </Link>
-            <div className="project-tile">
+            <Link href="/projects/mixologist" className="project-tile">
               <span className="project-title">Mixologist</span>
               <span className="project-tag">Live build</span>
-            </div>
+            </Link>
           </div>
         </section>
       </main>
