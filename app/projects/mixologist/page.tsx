@@ -43,6 +43,10 @@ const MixologistPage = () => {
                 without relying on tutorials was genuinely possible.
               </p>
               <p className="case-panel-copy">
+                The app used TheCocktailDB API as the source for cocktail data,
+                imagery, and ingredient information.
+              </p>
+              <p className="case-panel-copy">
                 Both the mobile and web versions can be found on my GitHub.
               </p>
               <div className="case-actions">
